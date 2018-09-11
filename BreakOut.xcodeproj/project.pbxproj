@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		ECCD2CF32146A1A9007620F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD2CF22146A1A9007620F5 /* AppDelegate.swift */; };
 		ECCD2CF52146A1A9007620F5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ECCD2CF42146A1A9007620F5 /* GameScene.sks */; };
-		ECCD2CF72146A1A9007620F5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = ECCD2CF62146A1A9007620F5 /* Actions.sks */; };
 		ECCD2CF92146A1A9007620F5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD2CF82146A1A9007620F5 /* GameScene.swift */; };
 		ECCD2CFB2146A1A9007620F5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD2CFA2146A1A9007620F5 /* GameViewController.swift */; };
 		ECCD2CFE2146A1A9007620F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECCD2CFC2146A1A9007620F5 /* Main.storyboard */; };
@@ -17,6 +16,10 @@
 		ECCD2D032146A1A9007620F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECCD2D012146A1A9007620F5 /* LaunchScreen.storyboard */; };
 		ECCD2D0E2146A1A9007620F5 /* BreakOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD2D0D2146A1A9007620F5 /* BreakOutTests.swift */; };
 		ECCD2D192146A1A9007620F5 /* BreakOutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD2D182146A1A9007620F5 /* BreakOutUITests.swift */; };
+		ECCD2D272146A36C007620F5 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD2D262146A36C007620F5 /* Ball.swift */; };
+		ECCD2D292146A49B007620F5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD2D282146A49B007620F5 /* Config.swift */; };
+		ECCD2D2B2146ABDF007620F5 /* Paddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD2D2A2146ABDF007620F5 /* Paddle.swift */; };
+		ECCD2D2E21476BBB007620F5 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD2D2D21476BBB007620F5 /* Block.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,6 @@
 		ECCD2CEF2146A1A8007620F5 /* BreakOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECCD2CF22146A1A9007620F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECCD2CF42146A1A9007620F5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		ECCD2CF62146A1A9007620F5 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		ECCD2CF82146A1A9007620F5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		ECCD2CFA2146A1A9007620F5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		ECCD2CFD2146A1A9007620F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +55,10 @@
 		ECCD2D142146A1A9007620F5 /* BreakOutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakOutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECCD2D182146A1A9007620F5 /* BreakOutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakOutUITests.swift; sourceTree = "<group>"; };
 		ECCD2D1A2146A1A9007620F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECCD2D262146A36C007620F5 /* Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
+		ECCD2D282146A49B007620F5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		ECCD2D2A2146ABDF007620F5 /* Paddle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paddle.swift; sourceTree = "<group>"; };
+		ECCD2D2D21476BBB007620F5 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +111,16 @@
 			children = (
 				ECCD2CF22146A1A9007620F5 /* AppDelegate.swift */,
 				ECCD2CF42146A1A9007620F5 /* GameScene.sks */,
-				ECCD2CF62146A1A9007620F5 /* Actions.sks */,
 				ECCD2CF82146A1A9007620F5 /* GameScene.swift */,
 				ECCD2CFA2146A1A9007620F5 /* GameViewController.swift */,
 				ECCD2CFC2146A1A9007620F5 /* Main.storyboard */,
 				ECCD2CFF2146A1A9007620F5 /* Assets.xcassets */,
 				ECCD2D012146A1A9007620F5 /* LaunchScreen.storyboard */,
 				ECCD2D042146A1A9007620F5 /* Info.plist */,
+				ECCD2D262146A36C007620F5 /* Ball.swift */,
+				ECCD2D2A2146ABDF007620F5 /* Paddle.swift */,
+				ECCD2D2D21476BBB007620F5 /* Block.swift */,
+				ECCD2D282146A49B007620F5 /* Config.swift */,
 			);
 			path = BreakOut;
 			sourceTree = "<group>";
@@ -242,7 +251,6 @@
 				ECCD2CF52146A1A9007620F5 /* GameScene.sks in Resources */,
 				ECCD2D002146A1A9007620F5 /* Assets.xcassets in Resources */,
 				ECCD2D032146A1A9007620F5 /* LaunchScreen.storyboard in Resources */,
-				ECCD2CF72146A1A9007620F5 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,9 +275,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECCD2D272146A36C007620F5 /* Ball.swift in Sources */,
+				ECCD2D2E21476BBB007620F5 /* Block.swift in Sources */,
 				ECCD2CF92146A1A9007620F5 /* GameScene.swift in Sources */,
 				ECCD2CFB2146A1A9007620F5 /* GameViewController.swift in Sources */,
+				ECCD2D2B2146ABDF007620F5 /* Paddle.swift in Sources */,
 				ECCD2CF32146A1A9007620F5 /* AppDelegate.swift in Sources */,
+				ECCD2D292146A49B007620F5 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
