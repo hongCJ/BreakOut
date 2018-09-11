@@ -13,20 +13,18 @@ class Block: SKShapeNode {
         super.init()
         setup()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
-    
+
     private func setup() {
-        path = UIBezierPath.init(rect: CGRect.init(x: 0, y: 0, width: BlockConfig.width, height: BlockConfig.height)).cgPath
-        
+        path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: BlockConfig.width, height: BlockConfig.height)).cgPath
+
         fillColor = BlockConfig.color
-        
         lineWidth = 0
-        
-        physicsBody = SKPhysicsBody.init(rectangleOf: CGSize.init(width: BlockConfig.width, height: BlockConfig.height))
+        physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: BlockConfig.width, height: BlockConfig.height))
         physicsBody?.categoryBitMask = BlockConfig.category
         physicsBody?.categoryBitMask = BallConfig.category
     }
