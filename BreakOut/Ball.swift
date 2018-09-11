@@ -27,6 +27,11 @@ class Ball: SKShapeNode {
         physicsBody = SKPhysicsBody(circleOfRadius: BallConfig.radius)
         physicsBody?.usesPreciseCollisionDetection = true
         physicsBody?.allowsRotation = true
-        physicsBody?.contactTestBitMask = PaddleConfig.category
+        physicsBody?.contactTestBitMask = PaddleConfig.category | BlockConfig.category
+        physicsBody?.restitution = 1.0
+        physicsBody?.friction = 0.0
+        physicsBody?.linearDamping = 0
+
+        name = BallConfig.name
     }
 }

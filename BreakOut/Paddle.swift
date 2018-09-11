@@ -13,15 +13,21 @@ class Paddle: SKShapeNode {
         super.init()
         setup()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        setup()
     }
-    
+
     private func setup() {
-        path = UIBezierPath.init(rect: CGRect.init(x: 0, y: 0, width: PaddleConfig.width, height: PaddleConfig.height)).cgPath
+        path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: PaddleConfig.width, height: PaddleConfig.height)).cgPath
         fillColor = PaddleConfig.color
-        physicsBody = SKPhysicsBody.init(rectangleOf: CGSize.init(width: PaddleConfig.width, height: PaddleConfig.height))
-        
+
+        physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: PaddleConfig.width, height: PaddleConfig.height))
+        physicsBody?.restitution = 1.0
+        physicsBody?.friction = 0.0
+        physicsBody?.isDynamic = false
+
+        name = PaddleConfig.name
     }
 }

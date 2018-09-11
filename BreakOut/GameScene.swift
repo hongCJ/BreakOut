@@ -6,47 +6,59 @@
 //  Copyright © 2018 ZhengHong. All rights reserved.
 //
 
-import SpriteKit
 import GameplayKit
+import SpriteKit
 
 class GameScene: SKScene {
-    
-    override func didMove(to view: SKView) {
-        physicsWorld.gravity = CGVector.init(dx: 0, dy: -5)
+    override func didMove(to _: SKView) {
+        physicsWorld.gravity = .zero
         physicsWorld.contactDelegate = self
-        
-        physicsBody = SKPhysicsBody.init(edgeLoopFrom: self.frame)
-        
-        let paddle = Paddle.init()
-        paddle.position = CGPoint.init(x: 0, y: PaddleConfig.height + 20)
+
+        physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+
+        addPaddle()
+        addBlock()
+        addBall()
+    }
+
+    private func addPaddle() {
+        let paddle = Paddle()
+        paddle.position = CGPoint(x: PaddleConfig.width, y: SceneConfig.height - 50).toSceneCoordinate()
         addChild(paddle)
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
-//            let location = touch.location(in: self)
-            var location = CGPoint.zero
-            let ball = Ball.init()
-            ball.position = location
-            addChild(ball)
-            
-            addBlock()
+
+    private func addBlock() {
+        let marginLeft = (SceneConfig.width - CGFloat(GameConfig.column) * (BlockConfig.width + 5.0) - 5.0) / 2
+        let marginTop: CGFloat = 40.0
+        for i in 0 ..< GameConfig.row {
+            for j in 0 ..< GameConfig.column {
+                let block = Block()
+                let x = CGFloat(j) * (BlockConfig.width + 5.0) + marginLeft + BlockConfig.width / 2
+                let y = CGFloat(i) * (BlockConfig.height + 5.0) + marginTop + BlockConfig.height / 2
+                block.position = CGPoint(x: x, y: y).toSceneCoordinate()
+                addChild(block)
+            }
         }
     }
-    
-    private func addBlock() {
-        let block = Block.init()
-        block.position = .zero
-        addChild(block)
+
+    private func addBall() {
+        let ball = Ball()
+        ball.position = CGPoint(x: SceneConfig.width / 2, y: SceneConfig.height - 50).toSceneCoordinate()
+        ball.physicsBody?.applyImpulse(CGVector(dx: -10, dy: 10))
+        addChild(ball)
     }
-    
-    override func update(_ currentTime: TimeInterval) {
+
+    private func clear() {
+        removeAllChildren()
+    }
+
+    override func update(_: TimeInterval) {
         // Called before each frame is rendered
     }
 }
 
 extension GameScene: SKPhysicsContactDelegate {
-    func didBegin(_ contact: SKPhysicsContact) {
+    func didBegin(_: SKPhysicsContact) {
         print("cll")
     }
 }

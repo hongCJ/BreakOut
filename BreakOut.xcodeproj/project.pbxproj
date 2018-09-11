@@ -20,6 +20,7 @@
 		ECCD2D292146A49B007620F5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD2D282146A49B007620F5 /* Config.swift */; };
 		ECCD2D2B2146ABDF007620F5 /* Paddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD2D2A2146ABDF007620F5 /* Paddle.swift */; };
 		ECCD2D2E21476BBB007620F5 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD2D2D21476BBB007620F5 /* Block.swift */; };
+		ECCD2D302147749A007620F5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD2D2F2147749A007620F5 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		ECCD2D282146A49B007620F5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		ECCD2D2A2146ABDF007620F5 /* Paddle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paddle.swift; sourceTree = "<group>"; };
 		ECCD2D2D21476BBB007620F5 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		ECCD2D2F2147749A007620F5 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				ECCD2D2A2146ABDF007620F5 /* Paddle.swift */,
 				ECCD2D2D21476BBB007620F5 /* Block.swift */,
 				ECCD2D282146A49B007620F5 /* Config.swift */,
+				ECCD2D2F2147749A007620F5 /* Helper.swift */,
 			);
 			path = BreakOut;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				ECCD2D2B2146ABDF007620F5 /* Paddle.swift in Sources */,
 				ECCD2CF32146A1A9007620F5 /* AppDelegate.swift in Sources */,
 				ECCD2D292146A49B007620F5 /* Config.swift in Sources */,
+				ECCD2D302147749A007620F5 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
