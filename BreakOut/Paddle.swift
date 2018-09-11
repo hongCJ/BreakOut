@@ -27,6 +27,7 @@ class Paddle: SKShapeNode {
         physicsBody?.restitution = 1.0
         physicsBody?.friction = 0.0
         physicsBody?.isDynamic = false
+        physicsBody?.categoryBitMask = PaddleConfig.category
 
         name = PaddleConfig.name
     }

@@ -26,7 +26,6 @@ class Block: SKShapeNode {
         lineWidth = 0
         physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: BlockConfig.width, height: BlockConfig.height))
         physicsBody?.categoryBitMask = BlockConfig.category
-        physicsBody?.categoryBitMask = BallConfig.category
         physicsBody?.restitution = 1.0
         physicsBody?.friction = 0.0
         physicsBody?.isDynamic = false

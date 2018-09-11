@@ -21,7 +21,7 @@ struct SceneConfig {
 struct BallConfig {
     static let color = UIColor.red
     static let radius: CGFloat = 15.0
-    static let category: UInt32 = 0x1 << 1
+    static let category: UInt32 = 0x1 << 0
     static let name = "ball"
 }
 
@@ -29,7 +29,7 @@ struct BlockConfig {
     static let width: CGFloat = 60.0
     static let height: CGFloat = 30.0
     static let color = UIColor.purple
-    static let category: UInt32 = 0x1 << 3
+    static let category: UInt32 = 0x1 << 1
     static let name = "block"
 }
 
@@ -39,4 +39,8 @@ struct PaddleConfig {
     static let color = UIColor.yellow
     static let category: UInt32 = 0x1 << 2
     static let name = "paddle"
+}
+
+struct WallConfig {
+    static let category: UInt32 = 0x1 << 3
 }
